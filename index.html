@@ -8,30 +8,30 @@
             </style>
         <div class="container">
 
-            <button class="newGame">New Game</button>
+            <button class="newGame" onclick="newGame()">New Game</button>
 
             <div class="row">
                 <div class="col">
                     <!-- Higliht the leader -->
                     <h3>HOME</h3>
-                    <div class="counter">
+                    <div class="counter" id="home">
                         0
                     </div>
                     <div class="counterButtons">
-                        <button class="buttons">+1</button>
-                        <button class="buttons">+2</button>
-                        <button class="buttons">+3</button>
+                        <button class="buttons" onclick="addScore('home',1)">+1</button>
+                        <button class="buttons" onclick="addScore('home',2)">+2</button>
+                        <button class="buttons" onclick="addScore('home',3)">+3</button>
                     </div>
                 </div>
                 <div class="col">
                     <h3>GUEST</h3>
-                    <div class="counter">
+                    <div class="counter" id="guest">
                         0
                     </div>
                     <div class="counterButtons">
-                        <button class="buttons">+1</button>
-                        <button class="buttons">+2</button>
-                        <button class="buttons">+3</button>
+                        <button class="buttons" onclick="addScore('guest',1)">+1</button>
+                        <button class="buttons" onclick="addScore('guest',2)">+2</button>
+                        <button class="buttons" onclick="addScore('guest',3)">+3</button>
                     </div>
                 </div>
             </div>
@@ -40,33 +40,23 @@
                 <div class="col">
                     <!-- Higliht the leader -->
                     <h3>PERIOD</h3>
-                    <div class="counter">
+                    <div class="counter" id="period">
                         0
                     </div>
                     <div class="counterButtons">
-                        <button class="buttons">+1</button>
+                        <button class="buttons" onclick="addScore('period',1)">+1</button>
                     </div>
                 </div>
                 <div class="col">
                     <h3>FOULS</h3>
-                    <div class="counter">
-                        0
+                    <div class="counter" id="fouls">
+                        0/0
                     </div>
                     <div class="counterButtons">
-                        <button class="buttons">+1</button>
+                        <button class="buttons" onclick="addScore('foulsHome',1)">HOME</button>
+                        <button class="buttons" onclick="addScore('foulsGuest',1)">GUEST</button>
                     </div>
                 </div>
-                
-                <div class="col">
-                    <h3>TIMER</h3>
-                    <div class="counter">
-                        0
-                    </div>
-                    <div class="counterButtons">
-                        <button class="buttons">RESET</button>
-                    </div>
-                </div>
-            </div>
         
         </div>
         <script src="index.js"></script>
